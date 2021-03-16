@@ -1,7 +1,7 @@
 name: repo
 on:
   schedule:
-    - cron: '1 */2 * * *'
+    - cron: '*/15 * * * *'
   workflow_dispatch:
   watch:
     types: started
@@ -17,15 +17,6 @@ jobs:
       - uses: actions/checkout@v2
         with:
           persist-credentials: false
-
-      - name: sync jd
-        uses: repo-sync/github-sync@v2
-        if: env.PAT
-        with:
-          source_repo: "https://github.com/DoveBoy/jd_scripts-gitee.git"
-          source_branch: "mmaster"
-          destination_branch: "jd"
-          github_token: ${{ secrets.PAT }}
           
       - name: sync free
         uses: repo-sync/github-sync@v2
