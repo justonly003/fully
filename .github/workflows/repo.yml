@@ -23,7 +23,7 @@ jobs:
         if: env.PAT
         with:
           source_repo: "https://github.com/DoveBoy/jd_scripts-gitee.git"
-          source_branch: "main"
+          source_branch: "mmaster"
           destination_branch: "jd"
           github_token: ${{ secrets.PAT }}
           
