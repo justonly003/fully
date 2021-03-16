@@ -1,0 +1,154 @@
+name: 🐕东xlc寻欢
+
+on:
+    workflow_dispatch:
+    schedule:
+        - cron: "5 */3 * * *"
+    watch:
+        types: [started]
+    repository_dispatch:
+        types: 🐕东xlc寻欢
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        if: github.event.repository.owner.id == github.event.sender.id
+        steps:
+            - uses: actions/checkout@v1
+            - name: Use Node.js 12.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 12.x
+            - name: npm install
+              run: |
+                  npm install
+            - name: '运行 【🐕东农场】'
+              run: |
+               node xlcsecret.js
+              env:
+               JD_COOKIE: ${{ secrets.JD_COOKIE }}
+               SYNCURL: https://raw.githubusercontent.com/justnew138/fully/master/jd_ddnc.js
+               
+            - uses: actions/checkout@v1
+            - name: Use Node.js 12.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 12.x
+            - name: npm install
+              run: |
+                  npm install
+            - name: '运行 【🐕种D】'
+              run: |
+               node xlcsecret.js
+              env:
+               JD_COOKIE: ${{ secrets.JD_COOKIE }}
+               SYNCURL: https://raw.githubusercontent.com/justnew138/fully/master/jd_zd.js
+            
+            
+            - uses: actions/checkout@v1
+            - name: Use Node.js 12.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 12.x
+            - name: npm install
+              run: |
+                  npm install
+            - name: '运行 【🐕萌】'
+              run: |
+                node xlcsecret.js
+              env:
+               JD_COOKIE: ${{ secrets.JD_COOKIE }}
+               SYNCURL: https://raw.githubusercontent.com/justnew138/fully/master/jd_mc.js
+            
+            
+            - uses: actions/checkout@v1
+            - name: Use Node.js 12.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 12.x
+            - name: npm install
+              run: |
+                  npm install
+            - name: '运行 【🐕D工】'
+              run: |
+                node xlcsecret.js
+              env:
+                 JD_COOKIE: ${{ secrets.JD_COOKIE }}
+                 SYNCURL: https://raw.githubusercontent.com/justnew138/fully/master/jd_ddgc.js
+  
+            - uses: actions/checkout@v1
+            - name: Use Node.js 12.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 12.x
+            - name: npm install
+              run: |
+                  npm install
+            - name: '运行 【🐕X工】'
+              run: |
+                node xlcsecret.js
+              env:
+                JD_COOKIE: ${{ secrets.JD_COOKIE }}
+                SYNCURL: https://raw.githubusercontent.com/justnew138/fully/master/jx_gc.js
+           
+            - uses: actions/checkout@v1
+            - name: Use Node.js 12.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 12.x
+            - name: npm install
+              run: |
+                  npm install
+            - name: '运行 【🐕东县金洪包】'
+              run: |
+               node xlcsecret.js
+              env:
+                 JD_COOKIE: ${{ secrets.JD_COOKIE }}
+                 SYNCURL: https://raw.githubusercontent.com/justnew138/fully/master/jdhb.js
+            
+            - uses: actions/checkout@v1
+            - name: Use Node.js 12.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 12.x
+            - name: npm install
+              run: |
+                  npm install
+            - name: '运行 【🐕东取关】'
+              run: |
+               node xlcsecret.js
+              env:
+                JD_COOKIE: ${{ secrets.JD_COOKIE }}
+                SYNCURL: https://raw.githubusercontent.com/justnew138/fully/master/jd_unsubscribe.js
+            
+            - uses: actions/checkout@v1
+            - name: Use Node.js 12.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 12.x
+            - name: npm install
+              run: |
+                  npm install
+            - name: '运行 【🐕东TRY】'
+              run: |
+               node xlcsecret.js
+              env:
+                JD_COOKIE: ${{ secrets.JD_COOKIE }}
+                SYNCURL: https://raw.githubusercontent.com/justnew138/fully/master/try.js
+                TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+                TG_USER_ID: ${{ secrets.TG_USER_ID }}
+            
+            - uses: actions/checkout@v1
+            - name: Use Node.js 12.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 12.x
+            - name: npm install
+              run: |
+                  npm install
+            - name: '运行 【🐕东qian到】'
+              run: |
+               node xlcsecret.js
+              env:
+                JD_COOKIE: ${{ secrets.JD_COOKIE }}
+                SYNCURL: https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
