@@ -1,7 +1,7 @@
 name: repofully
 on:
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '8 0 * * *'
   workflow_dispatch:
   watch:
   repository_dispatch:
