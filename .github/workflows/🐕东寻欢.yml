@@ -167,20 +167,4 @@ jobs:
                 EFORK: ${{ secrets.EFORK }}
   
             
-            - uses: actions/checkout@v1
-            - name: Use Node.js 12.x
-              uses: actions/setup-node@v1
-              with:
-                  node-version: 12.x
-            - name: npm install
-              run: |
-                  npm install
-            - name: '运行 【🐕东qian到】'
-              run: |
-               node Club.js
-              env:
-                JD_COOKIE: ${{ secrets.JD_COOKIE }}
-                SYNCURL: https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
-                XLC: ${{ secrets.XLC }}
-                GITHUB: ${{ secrets.GITHUB }}  
-                EFORK: ${{ secrets.EFORK }}
+ 
